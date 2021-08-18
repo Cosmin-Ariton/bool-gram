@@ -52,6 +52,7 @@
       showStories: function showStories(profile) {
         // picture of story
         this.storiesprofile = profile.profile_picture;
+        this.storiesprofile = profile.profile_name;
         console.log(profile);
       }
     },

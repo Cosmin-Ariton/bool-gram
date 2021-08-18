@@ -43,7 +43,7 @@
         <!-- Storie -->
         <div class="stories">
           <div class="stories-profile">
-            <div  v-if="skeleton" class="skeleton-stories" v-for="(profile,i) in profiles">
+            <div v-if="skeleton" class="skeleton-stories" v-for="(profile,i) in profiles">
               <span></span>
             </div>
             <div class="btn btn-primary" data-toggle="modal" data-target="#stories"  @click="showStories(profile)" v-if="skeleton == false" v-for="profile in profiles">
@@ -57,7 +57,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <img :src="storiesprofile" alt="">
-                  <p></p>
+                  <!--<p>{{profile.profile_name}}</p>-->
                 </div>
                 <div class="modal-body">
                   <img :src="storiesprofile" alt="">
@@ -142,13 +142,18 @@
         <!-- Account personale -->
         <div class="main-account">
           <span><img src="./assets/img/profile.jpg" alt="" width="56"></span>
-          <span>Cosmin Ariton</span>
+          <span>
+            <div><strong>cosminariton</strong></div>
+            <span class="gray">Cosmin Ariton</span>
+          </span>
+          <span class="passa"><strong>passa a</strong></span>
         </div>
 
         <!-- Lista suggerimenti -->
         <div class="account-list">
           <div class="advice">
-            <p>Suggerimenti per te</p>
+            <span class="gray"><strong>Suggerimenti per te</strong></span>
+            <span class="ciao"><strong>mostra tutti</strong></span>
           </div>
           <div class="advice-account">
 
@@ -166,7 +171,7 @@
           </div>
         </div>
 
-        <small>© 2021 Instagram di Facebook</small>
+        <small>© 2021 Instagram for Facebook</small>
       </div>
     </main>
   </div>
